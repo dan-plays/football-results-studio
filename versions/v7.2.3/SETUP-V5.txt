@@ -1,0 +1,17 @@
+FOOTBALL RESULTS STUDIO V5 - SETUP
+
+1. Extract the ZIP to a NEW folder.
+2. Close the previous Football Results Studio server window (port 8787).
+3. Double-click START-WINDOWS.bat. Node.js 18+ must be installed.
+4. Go to http://127.0.0.1:8787/dashboard and enter the key in MY-DASHBOARD-KEY.txt.
+5. Open OBS browser sources at the following URLs (or refresh existing sources):
+   Scoreboard: http://127.0.0.1:8787/panels
+   Goal and red card pop-ups: http://127.0.0.1:8787/goal
+   FOOTBALL LIVE rising ticker: http://127.0.0.1:8787/ticker
+   Match Centre: http://127.0.0.1:8787/match
+6. In the dashboard, use Start 120-second replay to run the Saturday 17 October 2026 historical test.
+7. Record locally in OBS; do not go live for this rehearsal.
+
+This is the v5 test build: six full-width scoreboard rows, rising ticker messages, competition ordering, timed verified goals and red cards. Some historical goal times remain unverified; this is not a complete live football feed.
+
+Security: keep the key private and do not expose port 8787 to the public internet.
