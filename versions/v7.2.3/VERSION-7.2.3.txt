@@ -1,2 +1,1 @@
-v7.2.3 Competition Identity Fix
-Exact country-scoped league matching; no guessing from generic competition names. Diagnostics now include provider competition samples.
+v7.2.3 Competition Identity Fix\nExact country-scoped league matching; no guessing from generic competition names. Diagnostics now include provider competition samples.\n
