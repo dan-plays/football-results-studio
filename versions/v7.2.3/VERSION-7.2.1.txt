@@ -1,0 +1,3 @@
+Version 7.2.1 - SportScore import repair
+Fixes rejection of fixtures without an id but with a URL, exposes provider catalog independently of scoreboard fixtures, and adds rejection diagnostics.
+Live provider compatibility remains unverified against real SportScore responses.
