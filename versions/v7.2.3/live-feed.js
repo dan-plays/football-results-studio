@@ -60,4 +60,3 @@ function createLiveFeed({apply,getFixtures,notify}){
  return {action,status};
 }
 module.exports={createLiveFeed,code,fixture};
-
