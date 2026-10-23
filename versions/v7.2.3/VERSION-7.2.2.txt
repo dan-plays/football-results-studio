@@ -1,0 +1,5 @@
+Football Results Studio v7.2.2 — Competition headings fix
+- Finished fixtures remain grouped by their own competition, rather than mixing countries under one header.
+- Worldwide competition headings use their real catalog names and wrap inside the scoreboard.
+- Prevent ambiguous competitions without country information from being misclassified as English leagues.
+- Ticker labels no longer substitute FA Cup for unrelated competitions.
