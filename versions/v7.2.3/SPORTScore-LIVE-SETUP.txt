@@ -1,0 +1,32 @@
+FOOTBALL RESULTS STUDIO v7.1 — SPORTScore FREE LIVE TEST
+========================================================
+1. Extract this ZIP into a NEW folder (keep your previous v7 as a backup).
+2. Install Node.js 18+ if needed.
+3. Double-click START-WINDOWS.bat.
+4. Open http://127.0.0.1:8787/live
+5. Paste the dashboard token printed by the launcher.
+6. Choose SportScore and a 2-minute refresh interval; click Start live feed.
+7. Check /panels, /ticker and /goal in OBS Browser Sources as before.
+8. Watch the diagnostics on /live: rawCount, skipped and truncatedPossible.
+
+NO API KEY OR PAYMENT IS REQUIRED FOR SPORTScore.
+
+IMPORTANT LIMITATIONS
+- Provider's documented daily fixture endpoint returns at most 200 matches and
+  has no documented pagination. On busy days some English/Scottish games may
+  be omitted. Check diagnostics. This build does NOT guarantee full coverage.
+- The documented sample does not fully specify the daily fixture JSON fields;
+  adapter accepts common variations, but a real response is needed to confirm.
+- Score changes trigger generic goal alerts; goalscorers and red cards aren't
+  fetched yet. VAR reversals trigger a score correction alert.
+- The first poll sets a baseline: it will not announce old goals.
+- Data may be delayed or missing. Provider caches for about 60 seconds.
+- Visible attribution is included on the overlays and /live page. SportScore
+  requires an HTML dofollow backlink. Please obtain their written confirmation
+  that a Twitch video overlay + dashboard link is sufficient before streaming.
+- Keep the original demo/replay functions separate from live operation.
+- API-Football remains available as an optional provider with a separate key.
+
+Docs: https://sportscore.com/developers/api/
+Terms: https://sportscore.com/developers/terms/
+Provider: https://sportscore.com/
