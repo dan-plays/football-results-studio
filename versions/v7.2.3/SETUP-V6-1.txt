@@ -1,0 +1,19 @@
+FOOTBALL RESULTS STUDIO v6.1 — FULL-WIDTH VIDIPRINTER
+
+1. Close the old server window. Extract this ZIP into a NEW folder.
+2. Run START-WINDOWS.bat and open http://127.0.0.1:8787/dashboard
+3. In OBS, create a NEW Browser Source for the ticker (do not reuse a cropped source):
+   URL: http://127.0.0.1:8787/ticker?v=61
+   Width: 1920    Height: 1080  (for a 1920x1080 OBS canvas)
+   For 2560x1080, use Width: 2560 Height: 1080.
+   Right-click source > Transform > Reset Transform; then Transform > Fit to Screen.
+   Do not use ALT-drag cropping. Make sure the source is NOT inside a narrow
+   scene group or source crop filter. It must cover the whole canvas.
+   Move this source above the background, but below popup sources.
+4. The ticker is anchored to the bottom of that Browser Source. It will cover
+   the entire canvas width only if the Browser Source itself covers the canvas.
+5. If using separate sources: /panels for the scoreboard and /goal for alerts.
+   Avoid adding /overlay at the same time as /ticker, or you will have two tickers.
+6. Press Refresh Cache of Current Page on each OBS Browser Source.
+
+This update changes display layout only. Historical replay data is unchanged.
