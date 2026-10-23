@@ -1,0 +1,90 @@
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif}body.overlay{background:transparent;color:#fff;overflow:hidden}.board{position:absolute;top:4%;left:2%;width:34%;height:74%;background:#211128f0;border:1px solid #4b7195;border-radius:12px;display:flex;flex-direction:column;padding:14px;gap:9px}.heading{font-weight:900;font-size:23px;color:#d8ef43;min-height:31px}.sub{font-size:12px;color:#a3bad4}.fixtures{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(3,1fr);gap:8px;flex:1;min-height:0}.fixture{background:#301934;border-radius:8px;padding:10px;display:flex;flex-direction:column;justify-content:center;gap:8px;font-size:15px;min-width:0}.line{display:flex;justify-content:space-between;gap:5px;align-items:center}.team{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.score{font-weight:900;background:#345477;border-radius:3px;padding:4px 7px}.status{font-size:11px;color:#9fbedb}.ticker{position:absolute;left:0;right:0;bottom:0;height:9%;background:#0a1a31f5;border-top:3px solid #bd563f;display:flex;align-items:center;gap:20px;padding:0 22px;font-size:21px;overflow:hidden}.ticker b{color:#71cfff;white-space:nowrap}.ticker-window{overflow:hidden;flex:1;white-space:nowrap}.ticker-track{display:inline-flex;gap:70px;white-space:nowrap;animation:marquee 35s linear infinite}.ticker-track span{display:inline-block}@keyframes marquee{from{transform:translateX(100%)}to{transform:translateX(-100%)}}.alert{position:absolute;top:19%;left:26%;width:48%;min-height:31%;padding:24px 32px;background:linear-gradient(135deg,#126fb7,#061b38);border:3px solid #b7e9ff;border-radius:16px;box-shadow:0 14px 65px #000b;display:none;text-align:center;flex-direction:column;justify-content:center;gap:12px;animation:pop .35s ease-out}.alert.active{display:flex}.alert .big{font-size:64px;font-weight:1000}.alert .match{font-size:30px;font-weight:800}.alert .detail{font-size:20px}.alert .comp{font-size:14px;letter-spacing:2px}@keyframes pop{from{opacity:0;transform:scale(.86)}to{opacity:1;transform:scale(1)}}.hide{display:none!important}
+body.dashboard{background:#0e1726;color:#e8f1ff;padding:25px;max-width:1250px;margin:auto}h1{margin:0 0 8px}p{color:#afc2d8}a{color:#7bcaff}section.panel{background:#17263a;border:1px solid #314763;border-radius:12px;padding:18px;margin:18px 0}label{display:block;margin:10px 0 5px;color:#b8cce3}input,select,button,textarea{font:inherit;border-radius:7px;padding:9px 12px}input,select,textarea{background:#0c1828;color:#fff;border:1px solid #49617e;max-width:100%}button{border:0;background:#1682cb;color:#fff;cursor:pointer;margin:5px 5px 5px 0}button:hover{background:#0e67a7}.danger{background:#9c3343}.row{display:flex;flex-wrap:wrap;gap:15px;align-items:end}.row>div{min-width:140px}.small{font-size:13px;color:#afc2d8}.statusline{color:#7fdbb0}.preview{width:100%;aspect-ratio:16/9;border:1px solid #49617e;border-radius:8px;background:#24354c}.log{max-height:200px;overflow:auto;font-size:13px;line-height:1.8}code{background:#091422;padding:3px 6px;border-radius:4px}details{margin-top:12px}
+
+.priority{display:grid;gap:5px;max-width:700px}.priorityrow{display:flex;align-items:center;gap:12px;background:#0d1a2c;border-radius:6px;padding:3px 8px}.priorityrow button{margin:2px;padding:5px 12px}.priorityrow button:disabled{opacity:.35;cursor:default}.priorityrow input{width:18px;height:18px}.matchcentre{position:absolute;top:4%;left:2%;width:36%;min-height:55%;background:#101d33f5;border:2px solid #477cae;border-radius:12px;padding:20px;color:white}.matchcentre h2{margin:5px 0 18px;font-size:25px}.matchscore{font-size:36px;font-weight:bold}.matchcentre .event{padding:9px;border-bottom:1px solid #35506d;font-size:15px}
+
+/* v4: six full-width fixtures, readable names, and a rising goal ticker */
+.fixtures{grid-template-columns:minmax(0,1fr);grid-template-rows:repeat(6,minmax(0,1fr));gap:5px}
+.fixture{padding:5px 10px;gap:2px;font-size:16px;min-height:0}
+.fixture .line{min-height:19px}.fixture .score{padding:1px 7px;flex-shrink:0}.fixture .status{font-size:10px}
+.ticker{overflow:visible}.ticker-window{height:100%;display:flex;align-items:center;overflow:visible;min-width:0}
+.ticker-track{animation:none!important;display:flex;align-items:center;white-space:normal;width:100%;height:100%;gap:0}
+.ticker-track span{display:block;white-space:normal;overflow:hidden;text-overflow:ellipsis;line-height:1.15;max-height:2.3em;font-size:19px}
+.ticker-track.rise-in{animation:riseGoal .45s ease-out both!important}
+@keyframes riseGoal{from{opacity:0;transform:translateY(105%)}to{opacity:1;transform:translateY(0)}}
+
+/* v5: red cards use a distinct alert colour. */
+.alert.red-card{background:linear-gradient(135deg,#9c1722,#310a16)!important;border-color:#ff4559!important}
+
+/* v6: six full-width scoreboard rows and a four-line broadcast vidiprinter. */
+.board{height:73%;bottom:auto}
+.fixtures{display:grid!important;grid-template-columns:minmax(0,1fr)!important;grid-template-rows:repeat(6,minmax(0,1fr))!important;gap:5px!important}
+.ticker{height:22%;bottom:0;left:0;right:0;display:flex;align-items:stretch;gap:0;padding:0;border-top:2px solid #cda94b;overflow:hidden;background:#17102af5;font-size:15px}
+.ticker>b{width:16%;min-width:120px;flex-shrink:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:12px;color:#f0f5ff;background:#101d35;border-right:2px solid #b99237;white-space:normal;font-size:clamp(12px,1.5vw,24px);letter-spacing:.04em}
+.ticker-window{flex:1;height:100%;display:block;overflow:hidden;min-width:0;padding:3px 10px}
+.ticker-track{display:flex;flex-direction:column;justify-content:flex-end;gap:2px;width:100%;height:100%;animation:none!important;white-space:normal;overflow:hidden}
+.vidi-line{height:calc((100% - 6px)/4);min-height:0;flex-shrink:0;display:flex;align-items:center;gap:10px;padding:2px 8px;border-left:4px solid var(--league-color);background:#172540;font-size:clamp(10px,1.1vw,17px);line-height:1.2;overflow:hidden}
+.vidi-league{flex:0 0 18%;min-width:0;color:var(--league-color);font-size:.78em;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vidi-message{flex:1;min-width:0;color:#f6f8ff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:600}
+.vidi-enter{animation:vidiAppear .32s ease-out both}
+.vidi-empty{color:#a5bdd9;padding:10px;font-weight:700;letter-spacing:.05em}
+@keyframes vidiAppear{from{opacity:0;transform:translateY(80%)}to{opacity:1;transform:translateY(0)}}
+
+/* v6.1: full-screen-width, OBS-safe lower-third vidiprinter. */
+html,body.overlay{width:100%;height:100%;margin:0;overflow:hidden}
+.ticker{position:fixed!important;inset:auto 0 0 0!important;width:100%!important;max-width:none!important;height:18%!important;min-height:0;z-index:40;box-sizing:border-box;border-top:3px solid #d1a54a;display:flex!important;align-items:stretch;padding:0!important;gap:0!important}
+.ticker.hide{display:none!important}
+.ticker>b{width:clamp(115px,12%,190px)!important;min-width:0!important;flex:0 0 clamp(115px,12%,190px)!important;padding:8px;font-size:clamp(13px,1.15vw,22px)}
+.ticker-window{min-width:0!important;flex:1 1 auto!important;width:0!important;padding:4px 9px!important;overflow:hidden!important}
+.ticker-track{height:100%!important;min-width:0!important;overflow:hidden!important;gap:2px!important}
+.vidi-line{height:calc((100% - 6px)/4)!important;flex:0 0 calc((100% - 6px)/4)!important;padding:2px 8px!important;gap:8px!important;font-size:clamp(12px,1.15vw,20px)!important}
+.vidi-league{flex:0 0 clamp(62px,10%,115px)!important;font-size:.75em!important}
+.vidi-message{font-size:1em!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}
+/* When a full overlay source is used, keep the scoreboard above the lower third. */
+.board{max-height:72%!important}
+
+/* v6.2: editable broadcast palette, shared by every overlay source. */
+:root{--frs-panel:#211128;--frs-row:#301934;--frs-accent:#bd563f;--frs-ticker:#17102a;--frs-text:#f5effa;--frs-label:#d8ef43}
+body.overlay{color:var(--frs-text)}
+.board{background:var(--frs-panel);border-color:var(--frs-accent)}
+.heading{color:var(--frs-label)}
+.fixture{background:var(--frs-row)}
+.score{background:var(--frs-panel);color:var(--frs-text)}
+.ticker{background:var(--frs-ticker)!important;border-top-color:var(--frs-accent)!important}
+.ticker>b{background:var(--frs-panel);border-right-color:var(--frs-accent);color:var(--frs-text)}
+.vidi-line{background:var(--frs-row)}
+.vidi-message{color:var(--frs-text)}
+.alert:not(.red-card){background:linear-gradient(135deg,var(--frs-accent),var(--frs-panel))}
+.theme-swatches{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:10px;margin:12px 0}
+.theme-swatches label{display:flex;align-items:center;justify-content:space-between;gap:12px;background:#0c1828;padding:8px 10px;border-radius:7px}
+.theme-swatches input[type=color]{width:52px;height:36px;padding:2px;cursor:pointer}
+.theme-preview{padding:15px;border-radius:10px;border-top:4px solid var(--preview-accent,#bd563f);background:var(--preview-panel,#211128);color:var(--preview-text,#f5effa)}
+.theme-preview .sample-row{padding:9px;margin-top:8px;background:var(--preview-row,#301934);border-left:4px solid var(--preview-accent,#bd563f)}
+.theme-preview .sample-ticker{margin-top:8px;padding:9px;background:var(--preview-ticker,#17102a)}
+
+/* Editable hex values beside every theme and competition colour picker */
+.theme-swatches label.hex-color-setting{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.hex-color-setting>span:first-child{flex:1 1 145px}
+.hex-color-controls{display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+.theme-swatches .hex-color-controls input[type=text]{width:104px;max-width:104px;padding:7px 8px;font-family:monospace;font-size:14px;text-transform:uppercase;background:#f8fafc;color:#101827;border:2px solid #64748b;border-radius:5px}
+.theme-swatches .hex-color-controls input.invalid{border-color:#ef4444;background:#fee2e2}
+.hex-error{display:none;color:#fecaca;font-size:11px}
+.hex-color-controls:has(input.invalid) .hex-error{display:inline}
+/* Mandatory provider credit when using SportScore data. Do not hide or remove. */
+.sportscore-credit{position:fixed;right:8px;bottom:3px;z-index:99999;color:#e9e9ed;background:#101020;padding:3px 7px;border-radius:3px;font:11px Arial,sans-serif;text-decoration:underline;opacity:0.92}
+
+/* v7.1.1: Dashboard pages must scroll independently of fixed-size OBS overlays. */
+html:has(body.dashboard){height:auto!important;min-height:100%;overflow-x:hidden!important;overflow-y:auto!important;scroll-behavior:auto;}
+body.dashboard{height:auto!important;min-height:100vh!important;overflow-x:hidden!important;overflow-y:visible!important;max-width:1250px;}
+body.dashboard section.panel{max-width:100%;}
+body.dashboard pre{max-width:100%;overflow-x:auto;overflow-y:visible;overflow-wrap:anywhere;word-break:break-word;}
+body.dashboard input,body.dashboard select{max-width:100%;}
+@media(max-width:650px){body.dashboard{padding:14px!important;}body.dashboard section.panel{padding:14px;}body.dashboard h1{font-size:1.5rem;}}
+
+/* v7.2: scroll-safe dashboard and worldwide selection */
+body.dashboard{overflow-y:auto!important;height:auto!important;min-height:100vh!important}body.dashboard .panel{max-width:100%;box-sizing:border-box}#worldLeagues{max-width:100%;overflow-x:hidden}#worldLeagues label{white-space:normal;overflow-wrap:anywhere}
+
+/* v7.2.2: allow long worldwide competition names to wrap inside heading. */
+.board .heading{height:auto!important;min-height:31px;max-height:80px;overflow:hidden;overflow-wrap:anywhere;white-space:normal;line-height:1.15;font-size:clamp(14px,1.45vw,23px)}
+.board .sub{flex-shrink:0}
+.vidi-league{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
