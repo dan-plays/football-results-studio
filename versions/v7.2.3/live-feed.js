@@ -1,4 +1,4 @@
-'use strict';
+ 'use strict';
 // API-Football / API-Sports adapter. Server-side key only; no browser credential exposure.
 const https=require('node:https');
 const {DEFAULT_ORDER}=require('./public/competitions');
