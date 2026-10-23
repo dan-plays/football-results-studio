@@ -1,0 +1,13 @@
+Football Results Studio v6.3 — recording-inspired default theme
+
+Based on the OBS recordings dated 19 October 2026, especially 04:08 and 04:17.
+
+1. Close your previous Football Results Studio Command Prompt.
+2. Extract this ZIP to a new folder.
+3. Double-click START-WINDOWS.bat.
+4. Open http://127.0.0.1:8787/dashboard
+5. Under Theme & colours, select DexterAI / Sports Score Bot (recording-inspired).
+6. Click Save theme & competition colours to apply it to all OBS overlays.
+7. If OBS still shows old colours, refresh each Browser Source.
+
+NOTE: Exact HEX colours are visually estimated from compressed recordings, not obtained from DexterAI settings. All six theme colours and individual competition colours remain editable.
