@@ -1,0 +1,18 @@
+FOOTBALL RESULTS STUDIO v6 — WINDOWS SETUP
+
+1. Stop the previous Football Results Studio Command Prompt (Ctrl+C).
+2. Extract this ZIP into a NEW folder. Do not merge it with the old version.
+3. Double-click START-WINDOWS.bat. Leave the Command Prompt open.
+4. Open http://127.0.0.1:8787/dashboard
+5. Use the dashboard key shown by the launcher if asked for it.
+6. In OBS, refresh existing browser sources (right-click > Properties > Refresh cache of current page), or add:
+   http://127.0.0.1:8787/panels  — scoreboard (six full-width rows)
+   http://127.0.0.1:8787/ticker  — four-line vidiprinter
+   http://127.0.0.1:8787/goal    — goal/red-card popups
+7. Click Reset replay first: this loads historical fixtures before kick-off.
+8. Click Start 120-second replay and record the OBS output.
+
+IMPORTANT: Replay data contains only a limited number of verified timed incidents.
+The replay reconciles other final scores at the end, not invented goal events.
+If fictional fixtures appear, use Reset replay and refresh OBS browser sources.
+If port 8787 is already in use, stop the older server before launching this one.
