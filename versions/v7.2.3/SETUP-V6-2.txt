@@ -1,0 +1,8 @@
+Football Results Studio v6.2 — custom colours
+1. Close the old local server.
+2. Extract this ZIP to a NEW folder.
+3. Run START-WINDOWS.bat.
+4. Open http://127.0.0.1:8787/dashboard and enter the local key from MY-DASHBOARD-KEY.txt.
+5. Open Theme & colours, choose a preset, adjust colours, and click Save.
+6. Refresh OBS browser sources once if necessary.
+OBS sources: /panels, /ticker, /goal, /match.
