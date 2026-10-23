@@ -1,0 +1,3 @@
+v7.1.1 SCROLL FIX
+The Live and Dashboard pages now support vertical page scrolling, including with long diagnostics. OBS overlay pages retain fixed dimensions.
+Close the previous server before launching this copy. Use Ctrl+F5 to reload /live after starting.
