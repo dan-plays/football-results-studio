@@ -1,0 +1,19 @@
+FOOTBALL RESULTS STUDIO — LIVE API-FOOTBALL EDITION
+
+1. Sign up for an API key at https://dashboard.api-football.com/
+2. Open START-WINDOWS.bat with Notepad. Change set "API_FOOTBALL_KEY=" to set "API_FOOTBALL_KEY=YOUR_KEY". Keep it private.
+3. Double-click START-WINDOWS.bat. Close your previous Football Results Studio first (port 8787).
+4. Open http://127.0.0.1:8787/live and paste the dashboard token printed by the launcher.
+5. Select refresh interval and click Start live feed. Check status/remaining quota.
+6. OBS browser sources are UNCHANGED: /panels, /goal, /ticker, /match.
+7. Click Stop after the matches.
+
+IMPORTANT: The free plan is 100 requests per day. Each refresh costs at least 1 request, event lookups cost more. 15 min polling is NOT near-instant. Pro ($19/mo advertised) has 7500 daily requests.
+
+Live events: score changes trigger lookups for confirmed scorer/card events. Goal flashes only happen for returned confirmed events, never from a bare score difference. Some goals/events may be missed if the API is delayed, if a lookup fails, or if a fixture has incomplete coverage. Events already completed before starting are not guaranteed to be announced correctly.
+
+Fixture competition mapping is intentionally conservative: only recognized English, Scottish and UEFA competition names appear. Check API coverage and mappings for the exact current season.
+
+Licensing: The API terms do not themselves guarantee Twitch redistribution rights. Obtain written permission before using this live data in a public/monetized stream. Don't assume team crests are licensed.
+
+This is a locally runnable integration, not a tested live broadcast. We cannot authenticate or test your account without your private key.
