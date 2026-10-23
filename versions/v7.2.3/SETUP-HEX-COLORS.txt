@@ -1,0 +1,9 @@
+FOOTBALL RESULTS STUDIO v6.3 HEX EDITION
+
+Open /dashboard, find Theme & colours. Each colour has a picker and an editable #RRGGBB hex code box. Paste or type your chosen code, then click Save theme & competition colours.
+
+Invalid codes are marked red and are not applied. You can enter six digits without # and the box will add it automatically.
+
+Both the six main theme colours and every competition colour have editable hex boxes. The original preset selection and saved settings remain supported.
+
+Start with START-WINDOWS.bat and close any previous running server first.
