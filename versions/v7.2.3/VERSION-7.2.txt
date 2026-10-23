@@ -1,0 +1,10 @@
+Football Results Studio v7.2 — Worldwide competitions
+
+1. Start START-WINDOWS.bat and open /live.
+2. Enter the local dashboard ingest token.
+3. Click Refresh once or Start live feed.
+4. In Worldwide leagues and live matches, click Load available leagues.
+5. Competitions with currently LIVE/HT matches are preselected. Select other leagues and Save selected leagues.
+6. View /panels or /ticker.
+
+Only competitions in the returned SportScore daily feed can be selected. The provider may return only the first 200 records, so global coverage cannot be guaranteed. Names/countries rely on fields returned by SportScore.
